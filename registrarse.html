@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+<header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="./index.html" class="active">Home</a></li>
+
+                        
+                            <li class="submenu">
+                                <a href="javascript:;">Nuestros productos</a>
+                                <ul>
+                                    <li><a href="hombre.html">Hombre</a></li>
+                                    <li><a href="#">Mujer</a></li>
+                                    <li><a href="#">Niños</a></li>
+                                    <li><a href="#">Mascotas</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="submenu">
+                                <a href="javascript:;">Accede</a>
+                                <ul>
+	                            <li><a href="#reservation">Inicia sesión</a></li> 
+	                            <li><a href="#reservation">Regístrate</a></li> 
+                                </ul>
+                            </li>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+<br/> 
+	<div>
+		<form id="registrar" action="registrado.php" method="post">
+                <h4>Formulario de registro</h4>
+        </div>
+        		<fieldset>
+                		<input name="nombre" type="text" id="nombre" placeholder="Tu nombre*" required="yes">
+               		</fieldset>
+               		<fieldset>
+                		<input name="apellidos" type="text" id="apellidos" placeholder="Tus apellidos*" required="yes">
+                	</fieldset>
+                	<fieldset>
+                       		<input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Email *" required="yes">
+                	</fieldset>
+	        	<fieldset>
+                	    	<input name="tlf" type="number" id="tlf" placeholder="Tu número de telefono*" required="yes">
+                	</fieldset>
+			<fieldset>
+                	 	<input name="edad" type="number" id="edad" placeholder="Tu edad*" required="yes">
+             		</fieldset>
+                	<fieldset>
+                 		<input name="dir" type="text" id="dir" placeholder="Inserte una dirección*" required="yes">
+                	</fieldset>
+                	<fieldset>
+                    		<input name="contrasena" type="password" id="contrasena" placeholder="Inserte una contraseña*" required="yes">
+                	</fieldset>
+              		<fieldset>
+               			<button type="submit" id="form-submit" VALUE="enviar" class="main-button-icon">Registrate</button>
+            		</fieldset>
+            	</form>
+	</body>
+
+</html>
