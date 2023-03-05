@@ -7,12 +7,10 @@
     $imagen = $_FILES['imagen']['name'];
     $descripcion = $_POST['descripcion'];
 
-    // Subir la imagen al servidor
-    move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file);
-    if(file_exists('productos')){
-		if(move_uploaded_file($imagen, 'productos/'.$nombreproducto)){
+  
+	if(move_uploaded_file($imagen, 'productos/'.$nombreproducto)){
 			echo "Archivo guardado con exito";
-		}else{
+	}else{
 			echo "Archivo no se pudo guardar";
 		}
     // Insertar los datos en la base de datos
