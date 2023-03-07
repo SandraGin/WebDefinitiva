@@ -18,10 +18,13 @@
             VALUES ('$nombreproducto', '$categoria', '$precio', '$cantidad', '$imagen', '$descripcion')";
     if (mysqli_query($conn, $sql)) {
         echo "El producto se ha añadido correctamente.";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    }
+        mysqli_close($conn);
 
-    // Cerrar la conexión a la base de datos
-    mysqli_close($conn);
+    } else {
+    
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        mysqli_close($conn);
+        
+    }
+     // Cerrar la conexión a la base de datos
 ?>
