@@ -39,19 +39,23 @@
     </header>
 <br/>
 	<div>
-	    <form id="login" action="login.php" method="post">
-            <h4>Formulario de registro</h4>
+                <h4>Index</h4>
+	<?php
+		if (!isset($_SESSION)) {
+  		session_start();
+		echo "Has has iniciado sesión con el usuario ".$_SESSION['email'].".";
+		echo "<a href='logout.php'>Cerrar Sesión</a>";
+		}
+		else
+		{
+			echo "<a href='login.html'>Iniciar Sesión</a>";
+		}
+		//include ('conexion.php');
+		//sesion_start();
+		//echo "$_SESSION['email']";
+		//echo "Iniciado sesión con $email";
+	?>
         </div>
-            <fieldset>
-                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Email *" required="yes">
-            </fieldset>
-            <fieldset>
-                <input name="contrasena" type="password" id="contrasena" placeholder="Inserte una contraseña*" required="yes">
-            </fieldset>
-            <fieldset>
-               	<button type="submit" id="form-submit" VALUE="enviar" class="main-button-icon">Iniciar sesión</button>
-            </fieldset>
-        </form>
 	</body>
 
 </html>
