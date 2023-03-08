@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
+   <link rel="stylesheet" href="estilos/style.css">
+	</head>
   <body>
      <div class="container" style="background-color:#ccc"> 
 	<header>
@@ -21,7 +22,6 @@
               <ul class="list-unstyled">
                 <li><a href="login.html" class="text-white">Iniciar sesión</a></li>
                 <li><a href="registrarse.html" class="text-white">Registrarse</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
               </ul>
             </div>
           </div>
@@ -39,7 +39,19 @@
       </div>
     </header>
      </div>
-     
+
+            <form id="login" action="login.php" method="post">
+	<section class="form-login">
+            <fieldset>
+                <input class="controls" name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Email *" required="yes">
+            </fieldset>
+            <fieldset>
+                <input class="controls" name="contrasena" type="password" id="contrasena" placeholder="Inserte una contraseña*" required="yes">
+            </fieldset>
+            <fieldset>
+                <button class="controls" type="submit" id="form-submit" VALUE="enviar" class="main-button-icon">Iniciar sesión</button>
+            </fieldset>
+     </section>
     <!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

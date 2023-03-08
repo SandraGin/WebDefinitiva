@@ -22,7 +22,7 @@ if(isset($_SESSION['email']) && $_SESSION['email'] == "administrador@ropalia.com
         </select><br><br>
 
         <label for="Nombreproducto">Nombre del producto:</label>
-        <input type="text" id="nombreproducto" name="Nombreproducto"><br><br>
+        <input type="text" id="nombreproducto" name="nombreproducto"><br><br>
         <label for="categoria">Seleccione la categoría</label><br/>
                   <select name="categoria" id="categoria" required>
                     <option value="hombre">Hombre</option>
