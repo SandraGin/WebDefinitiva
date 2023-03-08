@@ -32,26 +32,25 @@
 	</style>
 </head>
 <body>
-	<?php
-		// Incluir el archivo de conexión a la base de datos
-		include ('conexion.php');
+        <?php
+                // Incluir el archivo de conexión a la base de datos
+                include ('conexion.php');
 
-		// Obtener los productos de la base de datos
-		$sql = "SELECT * FROM productos";
-		$resultado = mysqli_query($conn, $sql);
+                // Obtener los productos de la base de datos
+                $sql = "SELECT * FROM productos";
+                $resultado = mysqli_query($conn, $sql);
 
-		// Crear una tabla HTML para mostrar los productos
-		echo "<table>";
-		echo "<tr><th>Nombre del producto</th><th>Categoría</th><th>Precio</th><th>Cantidad</th><th>Descripción</th></tr>";
-		while ($fila = mysqli_fetch_assoc($resultado)) {
-			//echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td></td><td><button class='btn-comprar'>Comprar</button></td></tr>";
-		echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td><td>".$fila['imagen']."</td><td><a href='comprado.php?idproducto=".$fila['idproducto']."' class='btn-comprar'>Comprar</a></td></tr>";
-}
-		echo "</table>";
+                // Crear una tabla HTML para mostrar los productos
+                echo "<table>";
+                echo "<tr><th>Nombre del producto</th><th>Categoría</th><th>Precio</th><th>Cantidad</th><th>Descripción</th><th>imagen</th></tr>";
+                while ($fila = mysqli_fetch_assoc($resultado)) {
+                        //echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td></td><td><button class='btn-comprar'>Comprar</button></td></tr>";
+                echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td><td><img src='./productos/".$fila['imagen']."'style='width='100'; height='100';'></img></td></tr>";
+                }
+                echo "</table>";
 
-		// Cerrar la conexión a la base de datos
-		mysqli_close($conn);
-	?>
+                // Cerrar la conexión a la base de datos
+                mysqli_close($conn);
+        ?>
 </body>
 </html>
-
