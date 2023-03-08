@@ -45,7 +45,7 @@
 		echo "<tr><th>Nombre del producto</th><th>Categoría</th><th>Precio</th><th>Cantidad</th><th>Descripción</th></tr>";
 		while ($fila = mysqli_fetch_assoc($resultado)) {
 			//echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td></td><td><button class='btn-comprar'>Comprar</button></td></tr>";
-		echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td></td><td><a href='comprado.php?idproducto=".$fila['idproducto']."' class='btn-comprar'>Comprar</a></td></tr>";
+		echo "<tr><td>".$fila['nombreproducto']."</td><td>".$fila['categoria']."</td><td>".$fila['precio']."</td><td>".$fila['cantidad']."</td><td>".$fila['descripcion']."</td><td>".$fila['imagen']."</td><td><a href='comprado.php?idproducto=".$fila['idproducto']."' class='btn-comprar'>Comprar</a></td></tr>";
 }
 		echo "</table>";
 
