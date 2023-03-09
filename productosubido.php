@@ -22,7 +22,7 @@
     if (mysqli_query($conn, $sql)) {
         echo "El producto se ha añadido correctamente.";
         mysqli_close($conn);
-
+	header ("Location: productos.php");
     } else {
     
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);

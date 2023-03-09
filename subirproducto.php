@@ -32,7 +32,7 @@
                         cursor: pointer;
                 }
         </style>
-
+  <link rel="stylesheet" href="estilos/style.css">
 </head>
 <header>
  <meta charset="utf-8">
@@ -52,7 +52,7 @@
               <h4 class="text-white">Accede</h4>
               <ul class="list-unstyled">
                 <li><a href="logout.php" class="text-white">Cerrar sesión</a></li>
-                <li><a href="compras.php" class="text-white">Ver mis compras</a></li>
+                <li><a href="productos.php" class="text-white">Ver productos</a></li>
                 <?php
                 session_start();
                 if(isset($_SESSION['email'])){
@@ -89,7 +89,7 @@ if(isset($_SESSION['email']) && $_SESSION['email'] == "administrador@ropalia.com
     header("Location:../index.php");
 }
 ?>
-
+<section class="form-login" style = ' margin-top: 10px; width: 75%;height: 75%;'>
 
 <head>
     <title>Formulario de productos</title>
@@ -99,29 +99,26 @@ if(isset($_SESSION['email']) && $_SESSION['email'] == "administrador@ropalia.com
     <form method="post" action="productosubido.php" enctype="multipart/form-data">
         </select><br><br>
 
-        <label for="Nombreproducto">Nombre del producto:</label>
-        <input type="text" id="nombreproducto" name="nombreproducto"><br><br>
-        <label for="categoria">Seleccione la categoría</label><br/>
-                  <select name="categoria" id="categoria" required>
+        <label  class="controls" for="Nombreproducto">Nombre del producto:</label>
+        <input  class="controls" style="color:white" type="text" id="nombreproducto" name="nombreproducto"><br><br>
+        <label  class="controls" for="categoria">Seleccione la categoría</label><br/>
+                  <select  class="controls" style="color:white" name="categoria" id="categoria" required>
                     <option value="hombre">Hombre</option>
                     <option value="mujer">Mujer</option>
                     <option value="niño">Niño</option>
                         </select>
         <br/><br/>
-        <label>Indica el precio del producto:</label></br>
-        <input type="number" id="precio" name="precio" ></br></br>
-        <label for="precio">Indica la cantidad de producto disponible</label><br>
-         <input name="cantidad" type="number" id="cantidad" required="yes"> <br>
-         <label for="Imagen">Imagen:</label>
-        <input type="file" id="imagen" name="imagen"><br><br>
-        <label>Inserta la descripción del producto</label><br/>
-         <textarea name="descripcion" id="descripcion" required="yes" rows="5" cols="50"></textarea>
-        <input type="submit" name="submit" value="Grabar">
-	<input type="button" value="borrar producto" action="borrarproducto.php">
-	<input type="button" value="ver productos" action="productos.php">
+        <label  class="controls" >Indica el precio del producto:</label></br>
+        <input  class="controls" style="color:white" type="number" id="precio" name="precio" ></br></br>
+        <label  class="controls" style="color:white" for="precio">Indica la cantidad de producto disponible</label><br>
+         <input  class="controls" style="color:white" name="cantidad" type="number" id="cantidad" required="yes"> <br>
+         <label  class="controls" for="Imagen">Sube la imagen:</label><br>
+        <input  class="controls" type="file" id="imagen" name="imagen"><br><br>
+        <label  class="controls" style="color:white" >Inserta la descripción del producto</label><br/>
+         <textarea  class="controls" style="color:white" name="descripcion" id="descripcion" required="yes" rows="5" cols="50"></textarea>
+        <input class="controls" type="submit" name="submit" value="Grabar">
     </form>
-    </form>
-
+</section>
         </div>
         <div>
     <!-- Si utilizamos componentes de Bootstrap que requieran Javascript agregar estos tres archivos -->
