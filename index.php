@@ -49,7 +49,7 @@
               <h4 class="text-white">Accede</h4>
               <ul class="list-unstyled">
                 <li><a href="logout.php" class="text-white">Cerrar sesión</a></li>
-		<li><a href="vermiscompras.php" class="text-white">Ver mis compras</a></li>
+		<li><a href="index.php" class="text-white">Ver mis compras(En construcción)</a></li>
                 <?php
                 session_start();
                 if(isset($_SESSION['email'])){
