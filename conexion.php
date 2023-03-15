@@ -1,7 +1,7 @@
 <?php
-$servername = "dbproyectofinal.cub76rsfz6aw.us-east-1.rds.amazonaws.com";
-$username = "admin";
-$password = "Root1234$";
+$servername = "ippublica";
+$username = "usuario";
+$password = "contraseña$";
 $db = "opcion2";
 
 $conn = new mysqli($servername, $username, $password, $db);
